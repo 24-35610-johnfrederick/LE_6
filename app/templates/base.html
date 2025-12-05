@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}FlaskRecords{% endblock %}</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        nav { margin-bottom: 20px; }
+        nav a { margin-right: 15px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('main.list_records') }}">Home</a>
+        <a href="{{ url_for('main.list_records') }}">About</a>
+        <!-- Replace with main.about if you later add an about page -->
+    </nav>
+
+    {% block content %}{% endblock %}
+</body>
+</html>
